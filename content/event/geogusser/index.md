@@ -1,5 +1,5 @@
 ---
-title: ゲーム紹介：GeoGuseer
+title: ゲーム紹介：GeoGusser
 
 event: MotionBoard開発部 リモートミーティング
 # event_url: https://example.org
