@@ -25,6 +25,8 @@ menu_title = "#082832"
 home_section_odd = "#f4f7f7"
 home_section_even = "#e3edef"
 
+link_hover = "#52c1d2"
+
 [dark]
   menu_primary = "#1a1e21"
   menu_text = "#f4f7f7"
