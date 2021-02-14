@@ -21,6 +21,8 @@ menu_text = "#062224"
 menu_text_active = "#239fab"
 menu_title = "#082832"
 
+background = "#f4f7f7" # homeから遷移した記事の背景とか
+
 # Home sections
 home_section_odd = "#f4f7f7"
 home_section_even = "#e3edef"
@@ -28,11 +30,17 @@ home_section_even = "#e3edef"
 link_hover = "#52c1d2"
 
 [dark]
-  menu_primary = "#1a1e21"
-  menu_text = "#f4f7f7"
-  menu_text_active = "#f2bb43"
+  background = "#292c2e" 
+  home_section_odd = "#292c2e"
+  home_section_even = "#222426"
+
+  menu_primary = "#191a1a"
+  menu_text = "#e3edef"
+  menu_text_active = "#72d8e8"
   menu_title = "#eef2f4"
-  home_section_odd = "#112d37"
-  home_section_even = "#19323c"
-  link = "#edcf77"
-  link_hover = "#f0c442"
+
+  card_simple_primary = "#bd215f"
+
+  link = "#239fab"
+  link_hover = "#72d8e8"
+  
