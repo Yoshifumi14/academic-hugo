@@ -59,6 +59,13 @@ $ hogo -D
 
 ## Tips
 
+#### hugo serverでエラーその1
+```
+$ hugo server
+Error: from config: failed to resolve output format "WebAppManifest" from site config
+```
+これを試す:https://wowchemy.com/docs/guide/troubleshooting/#error-failed-to-resolve-output-format
+
 #### `git clone`後のHoguのビルドエラー
 
 `git clone`後にHugoのテーマとして使用しているsubmoduleも更新する必要がある。
