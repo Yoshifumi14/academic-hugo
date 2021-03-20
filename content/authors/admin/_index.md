@@ -6,7 +6,7 @@ title: 武島 吉郁
 superuser: true
 
 # Role/position/tagline
-role: MotionBoard開発部 エンジニア
+role: 開発者
 
 # Organizations/Affiliations to show in About widget
 organizations:
@@ -55,6 +55,9 @@ social:
 - icon: slideshare
   icon_pack: fab
   link: https://www.slideshare.net/ssuser001ebb
+- icon: blog # 表示されないけどまあいっか
+  icon_pack: fab
+  link: https://qiita.com/takeshima_14
 
 # Link to a PDF of your resume/CV.
 # To use: copy your resume to `static/media/resume.pdf`, enable `ai` icons in `params.toml`, 
