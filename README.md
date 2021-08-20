@@ -1,37 +1,111 @@
-<p align="center"><a href="https://wowchemy.com" target="_blank" rel="noopener"><img src="https://wowchemy.com/img/logo_200px.png" alt="Wowchemy Website Builder"></a></p>
+# https://takeshima14.netlify.app
 
-# Academic Template for [Hugo](https://github.com/gohugoio/hugo)
+## Hugoプロジェクト
 
-The Hugo **Academic Resumé Template** empowers you to create your job-winning online resumé and showcase your academic publications.
+### Hugo コマンド
 
-[Check out the latest demo](https://academic-demo.netlify.app) of what you'll get in less than 10 minutes, or [view the showcase](https://wowchemy.com/user-stories/).
+#### Webサーバー立ち上げ
+```
+$ hugo server
+```
 
-[**Wowchemy**](https://wowchemy.com) makes it easy to create a beautiful website for free. Edit your site in Markdown, Jupyter, or RStudio (via Blogdown), generate it with Hugo, and deploy with GitHub or Netlify. Customize anything on your site with widgets, themes, and language packs.
+#### ビルド
+```
+$ hogo -D
+```
+※ 実際のビルドはGitHubActionsに任せているのでローカルでの実行は想定していない。
 
-- 👉 [**Get Started**](https://wowchemy.com/templates/)
-- 📚 [View the **documentation**](https://wowchemy.com/docs/)
-- 💬 [Chat with the **Wowchemy community**](https://discord.gg/z8wNYzb) or [**Hugo community**](https://discourse.gohugo.io)
-- 🐦 Twitter: [@wowchemy](https://twitter.com/wowchemy) [@GeorgeCushen](https://twitter.com/GeorgeCushen) [#MadeWithWowchemy](https://twitter.com/search?q=(%23MadeWithWowchemy%20OR%20%23MadeWithAcademic)&src=typed_query)
-- 💡 [Request a **feature** or report a **bug** for _Wowchemy_](https://github.com/wowchemy/wowchemy-hugo-modules/issues)
-- ⬆️ **Updating Wowchemy?** View the [Update Guide](https://wowchemy.com/docs/guide/update/) and [Release Notes](https://wowchemy.com/updates/)
+## GitHub Actionsでデプロイする設定
 
-## Crowd-funded open-source software
+### デプロイ先
+- リポジトリ: https://github.com/Yoshifumi14/Yoshifumi14.github.io
+- DeployKeyの設定でssh公開鍵を登録する
 
-To help us develop this template and software sustainably under the MIT license, we ask all individuals and businesses that use it to help support its ongoing maintenance and development via sponsorship.
+### デプロイ元 (このリポジトリ)
 
-### [❤️ Click here to unlock rewards with sponsorship](https://wowchemy.com/plans/)
+- リポジトリ: https://github.com/Yoshifumi14/HomePageHugo
+- Actions Secretの設定でssh秘密鍵を登録する
 
-## Ecosystem
+### Actionsの定義
+- `.github/workflows/main.yml`に記述
 
-* **[Hugo Academic CLI](https://github.com/wowchemy/hugo-academic-cli):** Automatically import publications from BibTeX
 
-[![Screenshot](https://raw.githubusercontent.com/wowchemy/wowchemy-hugo-modules/master/academic.png)](https://wowchemy.com)
+### 参考
+- ssh鍵の設定とかの記事: https://segmentfault.com/a/1190000021835698
+- GitHub Actions for GitHub Pages: https://github.com/peaceiris/actions-gh-pages
 
-## Demo image credits
 
-- [Open book](https://unsplash.com/photos/J4kK8b9Fgj8)
-- [Course](https://unsplash.com/photos/JKUTrJ4vK00)
+## Academic
 
-<!--
-[![Analytics](https://ga-beacon.appspot.com/UA-78646709-2/starter-academic/readme?pixel)](https://github.com/igrigorik/ga-beacon)
--->
+### AcademicをNetlifyにデプロイ
+
+ここからスタート:https://wowchemy.com/templates/
+- Create Siteをクリック
+- GitHubの認証
+- GitHubリポジトリ名を決める
+- ここでもう環境、あとはローカルで開発&pushするだけ
+- DomainSettingで{}.netlify.app以下のドメイン変更
+- Setie SettingsのBuilt&Deployからターゲットブランチ変更(https://app.netlify.com/sites/yoshifumi14/settings/deploys#deploy-contexts)
+
+管理:https://app.netlify.com/sites/yoshifumi14/overview
+成果物:https://takeshima14.netlify.app/
+
+## Tips
+
+#### hugo serverでエラーその1
+```
+$ hugo server
+Error: from config: failed to resolve output format "WebAppManifest" from site config
+```
+これを試す:https://wowchemy.com/docs/guide/troubleshooting/#error-failed-to-resolve-output-format
+
+#### `git clone`後のHoguのビルドエラー
+
+`git clone`後にHugoのテーマとして使用しているsubmoduleも更新する必要がある。
+```
+$ git submodule update --init --recursive
+```
+- 参考: https://infraya.work/posts/hugo_mypage_git_clone_error/
+
+#### submoduleの追加
+
+```
+$ git submodule add ${サブモジュール化するリポジトリurl} ${パス/名前指定}
+```
+
+#### submoduleの削除
+
+```
+$ git submodule deinit -f ${追加したサブモジュール}
+$ git rm -f ${追加したサブモジュール}
+$ rm -rf .git/modules/${追加したサブモジュール}
+```
+
+### Golang
+Academicテーマを使うときはGoのインストールが必要
+```
+$ brew install go
+```
+
+#### AcademicはGitHubPagesではなくNetflyを推奨している
+
+>If you prefer easy automated deployments whenever you make a change to your site, we recommend deploying with Netlify (see above) rather than Github Pages.
+
+引用元:https://wowchemy.com/docs/guide/deployment/#automating-deployment
+
+### Academicのicon追加
+
+assets/images/icon-packにおく
+https://gauger.io/fonticon/
+
+公式の記述:https://wowchemy.com/docs/getting-started/page-builder/#icons
+
+### themeの配色のカスタマイズ
+
+https://wowchemy.com/docs/getting-started/customization/#custom-theme
+
+## Docs
+
+- Hugo: https://gohugo.io/documentation/
+- GitHub Pages: https://docs.github.com/ja/github/working-with-github-pages
+- wowchemy: https://wowchemy.com/docs/
