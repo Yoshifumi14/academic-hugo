@@ -32,7 +32,6 @@ featured: false
 # - admin
 
 tags:
-- Medium
 - CI/CD
 - Software Development
 - DevOps
@@ -41,7 +40,6 @@ tags:
 - Bamboo
   
 categories:
-- Medium
 - CI/CD
 - Software Development
 - DevOps

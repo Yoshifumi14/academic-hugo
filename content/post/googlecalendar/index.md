@@ -32,7 +32,6 @@ featured: false
 # - admin
 
 tags:
-- Qiita
 - Java
 - Scala
 - CData
@@ -40,7 +39,6 @@ tags:
 - Google Calendar
 
 categories:
-- Qiita
 - Java
 - Scala
 - CData

@@ -1,18 +1,18 @@
 ---
-title: VSCodeのMetalsプラグインでScala(sbt)環境をIDEっぽくする
+title: 【React】 メニューとスクロール位置の連動を実装
 # subtitle: Welcome 👋 We know that first impressions are important, so we've populated your new site with some initial content to help you get familiar with everything in no time.
 
 # Summary for listings and search engines
-summary: https://qiita.com/takeshima_14/items/60b3122cc879ad5a5486
+summary: https://qiita.com/takeshima_14/items/4b53d590ab209040b052
 
 # Link this post with a project
 # projects: []
 
 # Date published
-date: "2021-01-02T00:00:00Z"
+date: "2022-05-01T00:00:00Z"
 
 # Date updated
-lastmod: "2021-01-06T00:00:00Z"
+lastmod: "2022-05-01T00:00:00Z"
 
 # Is this an unpublished draft?
 draft: false
@@ -32,18 +32,15 @@ featured: false
 # - admin
 
 tags:
-- Scala
-- Java
-- sbt
-- VSCode
-- Metals
-  
+- React
+- JavaScript
+- TypeScript
+
 categories:
-- Scala
-- Java
-- sbt
-- VSCode
-- Metals
+- React
+- JavaScript
+- TypeScript
+  
 ---
 
-https://qiita.com/takeshima_14/items/60b3122cc879ad5a5486
+https://qiita.com/takeshima_14/items/4b53d590ab209040b052

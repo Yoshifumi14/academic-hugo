@@ -32,16 +32,12 @@ featured: false
 # - admin
 
 tags:
-- Medium
-- UI
-- UX
+- UI/UX
 - Software Development
 - Design
   
 categories:
-- Medium
-- UI
-- UX
+- UI/UX
 - Software Development
 - Design
 ---

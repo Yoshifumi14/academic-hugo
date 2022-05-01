@@ -32,13 +32,11 @@ featured: false
 # - admin
 
 tags:
-- Medium
 - Quality Assurance
 - Software Development
 - Software Testing
   
 categories:
-- Medium
 - Quality Assurance
 - Software Development
 - Software Testing
