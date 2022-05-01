@@ -4,36 +4,17 @@
 
 ### Hugo コマンド
 
-#### Webサーバー立ち上げ
+Webサーバー立ち上げ
+
 ```
 $ hugo server
 ```
 
-#### ビルド
+ビルド
+
 ```
 $ hogo -D
 ```
-※ 実際のビルドはGitHubActionsに任せているのでローカルでの実行は想定していない。
-
-## GitHub Actionsでデプロイする設定
-
-### デプロイ先
-- リポジトリ: https://github.com/Yoshifumi14/Yoshifumi14.github.io
-- DeployKeyの設定でssh公開鍵を登録する
-
-### デプロイ元 (このリポジトリ)
-
-- リポジトリ: https://github.com/Yoshifumi14/HomePageHugo
-- Actions Secretの設定でssh秘密鍵を登録する
-
-### Actionsの定義
-- `.github/workflows/main.yml`に記述
-
-
-### 参考
-- ssh鍵の設定とかの記事: https://segmentfault.com/a/1190000021835698
-- GitHub Actions for GitHub Pages: https://github.com/peaceiris/actions-gh-pages
-
 
 ## Academic
 
@@ -45,10 +26,10 @@ $ hogo -D
 - GitHubリポジトリ名を決める
 - ここでもう環境、あとはローカルで開発&pushするだけ
 - DomainSettingで{}.netlify.app以下のドメイン変更
-- Setie SettingsのBuilt&Deployからターゲットブランチ変更(https://app.netlify.com/sites/yoshifumi14/settings/deploys#deploy-contexts)
+- Setie SettingsのBuilt&Deployからターゲットブランチ変更
 
-管理:https://app.netlify.com/sites/yoshifumi14/overview
-成果物:https://takeshima14.netlify.app/
+管理: https://app.netlify.com/
+成果物: https://takeshima14.netlify.app/
 
 ## Tips
 
